@@ -229,15 +229,15 @@ def shufle_words(s):
 def capitalize_words(s):
     new_s = ""
     capitalize_next = True
-    for i in s:
-        if capitalize_next and i.isalpha():
-            new_s += i.upper()
+    for letter in s:
+        if letter.isalpha() and capitalize_next:
+            new_s += letter.upper()
             capitalize_next = False
         else:
-            new_s += i
-
-        if i == " ":
+            new_s += letter
+        if letter == " ":
             capitalize_next = True
+    return new_s
 
 
 #task20
