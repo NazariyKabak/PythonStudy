@@ -1,0 +1,31 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Мій сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="height: 50px;">
+        <h1>Flask-сайт</h1>
+        <nav>
+            <a href="/">Головна</a> |
+            <a href="/about">Про нас</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Контент сторінки буде тут -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2025</p>
+    </footer>
+</body>
+</html>

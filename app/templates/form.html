@@ -1,0 +1,29 @@
+<!-- templates/form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if name and email %}
+        <p>Hello {{ name }}, your email is {{ email }}!</p>
+    {% else %}
+        <form method="POST" action="/register">
+            <label for="name">Your name: </label>
+            <input type="text" id="name" name="name" value="{{ name or '' }}"><br><br>
+
+            <label for="email">Your email: </label>
+            <input type="text" id="email" name="email" value="{{ email or '' }}"><br><br>
+
+            <input type="submit" value="Registr">
+        </form>
+    {% endif %}
+</body>
+</html>

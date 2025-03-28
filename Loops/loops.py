@@ -39,11 +39,11 @@ from string import digits
 #task6
 n = int(input("Enter a number: "))
 isPrime = True
-if n<2:
+if n < 2:
     isPrime = False
 else:
-    for i in range(2,int(math.sqrt(n))+1):
-        if n%i==0:
+    for i in range(2, int(math.sqrt(n)) + 1):
+        if n % i == 0:
             isPrime = False
             break
 print("Prime" if isPrime else "Not prime")
@@ -104,6 +104,6 @@ count = 0
 
 #task12
 factorial_n = 1
-for i in range(1,n+1):
+for i in range(1, n + 1):
     factorial_n = factorial_n * i
 print(factorial_n)
