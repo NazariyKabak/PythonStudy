@@ -1,0 +1,7 @@
+This is the first sentence.
+Here is another one.
+Short sentence.
+This one is a bit longer than the previous ones, right?
+Python is great for beginners and pros alike.
+One more line just to keep things interesting.
+Last sentence to finish the file.
